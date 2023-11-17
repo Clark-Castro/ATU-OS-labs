@@ -1,0 +1,9 @@
+First Part:
+inode 1 is for filesystem's bad-block list.
+inode 2 is for the root file system.
+in ext4 file-system, inode 3 is for user quota.
+
+Second Part:
+because /sys, /proc and /dev, are all from different file-systems.
+inode is unique "per file-system" and it's okay if two files in a directory have the same inode but different file-systems.
+for example, /proc is from procfs and /sys is from sysfs. these two file-systems are entirely virtual (kernel-generated).
